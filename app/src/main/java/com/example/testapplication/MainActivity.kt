@@ -12,12 +12,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
         val changeThemeButton = findViewById<Button>(R.id.changeThemeButton)
         val themetxt = findViewById<TextView>(R.id.themetxt)
-
-
         val sharedPreferenceManager = SharedPreferenceManager(this)
         var checkedTheme = sharedPreferenceManager.theme
         themetxt.text = "Theme : ${themeTitleList[sharedPreferenceManager.theme]}"
